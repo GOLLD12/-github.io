@@ -123,7 +123,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="https://yaart-web-alice-images.s3.yandex.net/6dee7459398b11f1b45bd2eaae38ed22:1" height="600" width="500" alt="Логотип кофейни">
+            <img src="https://yaart-web-alice-images.s3.yandex.net/6dee7459398b11f1b45bd2eaae38ed22:1" height="700" width="500" alt="Логотип кофейни">
         </div>
         <nav>
             <ul>
@@ -245,20 +245,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('scroll', function() {
-                const sections = document.querySelectorAll('section');
-                sections.forEach(section => {
-                    const top = section.offsetTop;
-                    const bottom = top + section.offsetHeight;
-                    const scroll = window.scrollY + window.innerHeight;
-
-                    if (scroll > top && scroll < bottom) {
-                section.style.opacity = 1;
-            } else {
-                section.style.opacity = 0.3;
-            }
-        });
-    });
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
