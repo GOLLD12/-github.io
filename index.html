@@ -1,361 +1,306 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кофейня «Ароматный уголок»</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-        }
-
-        .logo img {
-            height: 100px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
-
-        #hero {
-            text-align: center;
-            padding: 100px 0;
-            background-color: #f5f5f5;
-        }
-
-        #hero h1 {
-            margin-bottom: 20px;
-        }
-
-        #hero button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .order-btn {
-            background-color: #000;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px; 
-            transition: transform 0.3s ease, box-shadow 0.3s ease; 
-        }
-
-        .order-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-
-        .menu-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .item {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }     
-
-        .item:hover {
-            transform: translateY(-5px);
-        }
-        .item-content {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px 8px 0 0;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        .item-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 15px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-            text-align: left;
-        }
-        
-        .item:hover .item-info {
-            transform: translateY(0);
-        }
-
-        .item:hover img {
-            transform: scale(1.1);
-        }
-   
-        .item.category-title {
-    width: 100%;
-    text-align: left;
-    padding: 0;
-    border: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-        }
-        .contact-section {
-            background: #f9f9f9;
-            padding: 40px;
-            text-align: center;
-        }
-
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button[type="submit"] {
-            background: #333;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-    .menu-item,
-    .menu-item.reverse {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-    .menu-text,
-    .menu-img {
-        max-width: 100%;
-        width: 100%;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кофейня «Ароматный уголок»</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-    </style>
+
+body {
+font-family: 'Arial', sans-serif;
+line-height: 1.6;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background-color: #333;
+color: white;
+}
+
+.logo img {
+height: 100px;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+}
+
+#hero {
+text-align: center;
+padding: 100px 0;
+background-color: #f5f5f5;
+}
+
+#hero h1 {
+margin-bottom: 20px;
+}
+
+#hero button {
+padding: 10px 20px;
+background-color: #333;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.menu-items {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+}
+
+.item {
+border: 1px solid #ddd;
+padding: 20px;
+border-radius: 8px;
+text-align: center;
+}
+
+.item img {
+width: 100%;
+height: auto;
+border-radius: 8px;
+margin-bottom: 10px;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+background-color: #333;
+color: white;
+}
+.contact-section {
+background: #f9f9f9;
+padding: 40px;
+text-align: center;
+}
+
+form {
+max-width: 400px;
+margin: 0 auto;
+}
+
+input, textarea {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+button[type="submit"] {
+background: #333;
+color: white;
+padding: 12px 24px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.order-btn {
+background-color: #000; 
+color: #fff; 
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+cursor: pointer;
+margin-top: 10px; 
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-btn:hover {
+transform: scale(1.05);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+@media (max-width: 768px) {
+.menu-item,
+.menu-item.reverse {
+flex-direction: column;
+text-align: center;
+gap: 1rem;
+}
+.menu-text,
+.menu-img {
+max-width: 100%;
+width: 100%;
+}
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="https://yaart-web-alice-images.s3.yandex.net/ad35790d3b2a11f185da864982c6637a:1" alt="Логотип кофейни">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#menu">Меню</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+<div class="logo">
+<img src="https://yaart-web-alice-images.s3.yandex.net/ad35790d3b2a11f185da864982c6637a:1" alt="Логотип кофейни">
+</div>
+<nav>
+<ul>
+<li><a href="#about">О нас</a></li>
+<li><a href="#menu">Меню</a></li>
+<li><a href="#reviews">Отзывы</a></li>
+<li><a href="#contacts">Контакты</a></li>
+</ul>
+</nav>
+</header>
 
-    <section id="hero">
-        <h1>Добро пожаловать в кофейню «Ароматный уголок»!</h1>
-        <p>Свежеобжаренный кофе, уютная атмосфера и гостеприимный персонал.</p>
-        <button>Посмотреть меню</button>
-    </section>
-        <section id="about">
-        <h2>О нас</h2>
-        <p>Мы — небольшая, но душевная кофейня, где каждый напиток готовится с любовью. Используем только качественные зёрна, следим за свежестью и вкусом. Наша цель — подарить вам моменты радости и уюта.</p>
-        <img src="https://yaart-web-alice-images.s3.yandex.net/292e8711398c11f181272a9768a85627:1" height="600" alt="Интерьер кофейни">
-    </section>
-    <section id="about">
-        <h2>О нас</h2>
-        <p>Мы — небольшая, но душевная кофейня, где каждый напиток готовится с любовью. Используем только качественные зёрна, следим за свежестью и вкусом. Наша цель — подарить вам моменты радости и уюта.</p>
-    </section>
-
-    <section id="menu">
-        <h2>Меню</h2>
-        <div class="menu-items">
-            <div class="item">
-                <h3>Эспрессо</h3>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/9efa82d6398c11f1afd3328e885bd055:1" alt="Эспрессо">
-                <div class="item-info">
-                <p>Крепкий, насыщенный, 30 мл.</p>
-                <p>Цена: 150 ₽</p>
-                <button class="order-btn">Заказать</button>
-            </div>
-            <div class="item">
-                <h3>Латте</h3>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/7421721e398d11f1b60396bdff3d57c1:1" alt="Латте">
-                <div class="item-info">
-                <p>Нежный молочный напиток с кофейной основой.</p>
-                <p>Цена: 250 ₽</p>
-                <button class="order-btn">Заказать</button>
-            </div>
-           <div class="item">
-                <h4>Американо</h4>
-                <img src="https://avatars.mds.yandex.net/get-eda/15377433/3b7c5ab49cf54cae924ba92921255cef/M_height" alt="Американо">
-                 <div class="item-info">
-                <p>Эспрессо с горячей водой, сбалансированный вкус, 250 мл.</p>
-                <p>Цена: 180 ₽</p>
-               <button class="order-btn">Заказать</button>
-            </div>
-        </div>
-         <div class="item">
-                <h3>Макиато</h3>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/editing_result_b4df63a23ee311f184ff9eb64fb295fc:1" alt="Макиато">
-                <div class="item-info">
-                <p>Кофейный напиток, изготавливаемый путем добавления к эспрессо минимального количества молока, обычно взбитого, 100мл.</p>
-                <p>Цена: 300 ₽</p>
-             <button class="order-btn">Заказать</button>
-            </div>
-          <div class="item">
-                <h4>Капучино</h4>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/editing_result_fa9e9f1a3ee311f1b87edebd91c662d7:1" alt="Капучино">
-                <div class="item-info">
-                <p>Идеальное сочетание эспрессо, молока и молочной пены, 300 мл.</p>
-                <p>Цена: 230 ₽</p>
-              <button class="order-btn">Заказать</button>
-            </div>
-            <div class="item">
-                <h4>Раф</h4>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/editing_result_53ea66bd3ee411f1acf67e81e37f7058:1" alt="Раф">
-                <div class="item-info">
-                <p>Нежный кофейный напиток со сливками и ванильным сахаром, 300 мл.</p>
-                <p>Цена: 280 ₽</p>
-                <button class="order-btn">Заказать</button>
-            </div>
-            <div class="item">
-                <h4>Флэт уайт</h4>
-                <img src="https://www.koolinar.ru/all_image/recipes/176/176360/recipe_07ee1afa-5ed9-438a-a489-e5a157810a13.png" alt="Флэт уайт">
-                <div class="item-info">
-                <p>Двойной эспрессо с тонким слоем молочной пены, 240 мл.</p>
-                <p>Цена: 260 ₽</p>
-                <button class="order-btn">Заказать</button>
-            </div>
-    </div>
-    </section>
-        <div class="item category-title">
-            <h3>Десерты</h3>
-        </div>
-        <div class="menu-items">
-            <div class="item">
-                <h4>Тирамису</h4>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/e3c33dc93b1911f19b2a5e71b7922efa:1" height="450" width="500" alt="Тирамису">
-                <div class="item-info">
-                <p>Классический итальянский десерт с кофе, маскарпоне и бисквитом.</p>
-                <p>Цена: 320 ₽</p>
-                <button class="order-btn">Заказать</button>
-            </div>
-            <div class="item">
-                <h4>Чизкейк Нью‑Йорк</h4>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/24a4953e3b1a11f19db92a3dc7d1aac7:1" height="450" width="500" alt="Чизкейк">
-                <div class="item-info">
-                <p>Нежный сырный десерт на песочной основе с карамельной глазурью.</p>
-                <p>Цена: 290 ₽</p>
-                <button class="order-btn">Заказать</button>
-            </div>
-            <div class="item">
-                <h4>Шоколадный брауни</h4>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/87acb2733b1a11f19a9b325b8fe0ef20:1" height="450" width="500" alt="Брауни">
-                <div class="item-info">
-                <p>Плотный шоколадный десерт с тягучей серединкой.</p>
-                <p>Цена: 220 ₽</p>
-                <button class="order-btn">Заказать</button>
-            </div>
-            <div class="item">
-                <h4>Круассан с миндалем</h4>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/af67c7423b1a11f1b878c26dd85608fb:1" height="450" width="500" alt="Круассан">
-                <div class="item-info">
-                <p>Слоёный круассан с миндальным кремом и лепестками миндаля.</p>
-                <p>Цена: 190 ₽</p>
-                <button class="order-btn">Заказать</button>
-            </div>
-            <div class="item">
-                <h4>Морковный торт</h4>
-                <img src="https://yaart-web-alice-images.s3.yandex.net/dffa35f63b1a11f19db446d2c860473b:1" height="450" width="500" alt="Морковный торт">
-                <div class="item-info">
-                <p>Влажный морковный бисквит с кремом из сливочного сыра.</p>
-                <p>Цена: 270 ₽</p>
-                <button class="order-btn">Заказать</button>
-            </div>
-    </div>
+<section id="hero">
+<h1>Добро пожаловать в кофейню «Ароматный уголок»!</h1>
+<p>Свежеобжаренный кофе, уютная атмосфера и гостеприимный персонал.</p>
+<button>Посмотреть меню</button>
 </section>
-          <section id="contacts">
-        <h2>Контакты</h2>
-        <address>
-            <p>Адрес: г. Москва, ул. Примерная, д. 123</p>
-            <p>Телефон: +7 (495) 123-45-67</p>
-            <p>Email: coffee@example.com</p>
-        </address>
-        <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
-    </section>
-    <section id="contacts" class="contact-section">
-        <h2>Обратная связь</h2>
-        <form id="contactForm">
-            <input type="text" name="name" placeholder="Ваше имя" required>
-            <input type="email" name="email" placeholder="Ваш email" required>
-            <textarea name="message" placeholder="Сообщение" rows="4" required></textarea>
-            <button type="submit">Отправить</button>
-        </form>
-    </section>
-    <footer>
-        <p>© 2026 Кофейня «Ароматный уголок».</p>
-    </footer>
+<section id="about">
+<h2>О нас</h2>
+<p>Мы — небольшая, но душевная кофейня, где каждый напиток готовится с любовью. Используем только качественные зёрна, следим за свежестью и вкусом. Наша цель — подарить вам моменты радости и уюта.</p>
+<img src="https://yaart-web-alice-images.s3.yandex.net/292e8711398c11f181272a9768a85627:1" height="600" alt="Интерьер кофейни">
+</section>
+<section id="about">
+<h2>О нас</h2>
+<p>Мы — небольшая, но душевная кофейня, где каждый напиток готовится с любовью. Используем только качественные зёрна, следим за свежестью и вкусом. Наша цель — подарить вам моменты радости и уюта.</p>
+</section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Спасибо за обращение!');
-        });
-    }
+<section id="menu">
+<h2>Меню</h2>
+<div class="menu-items">
+<div class="item">
+<h3>Эспрессо</h3>
+<img src="https://yaart-web-alice-images.s3.yandex.net/9efa82d6398c11f1afd3328e885bd055:1" alt="Эспрессо">
+<button class="order-btn">Заказать</button>
+<p>Крепкий, насыщенный, 30 мл.</p>
+<p>Цена: 150 ₽</p>
+</div>
+<div class="item">
+<h3>Латте</h3>
+<img src="https://yaart-web-alice-images.s3.yandex.net/7421721e398d11f1b60396bdff3d57c1:1" alt="Латте">
+<button class="order-btn">Заказать</button>
+<p>Нежный молочный напиток с кофейной основой.</p>
+<p>Цена: 250 ₽</p>
+</div>
+<div class="item">
+<h4>Американо</h4>
+<img src="https://avatars.mds.yandex.net/get-eda/15377433/3b7c5ab49cf54cae924ba92921255cef/M_height" alt="Американо">
+<button class="order-btn">Заказать</button>
+<p>Эспрессо с горячей водой, сбалансированный вкус, 250 мл.</p>
+<p>Цена: 180 ₽</p>
+</div>
+</div>
+<div class="item">
+<h3>Макиато</h3>
+<img src="https://yaart-web-alice-images.s3.yandex.net/editing_result_b4df63a23ee311f184ff9eb64fb295fc:1" alt="Макиато">
+<button class="order-btn">Заказать</button>
+<p>Кофейный напиток, изготавливаемый путем добавления к эспрессо минимального количества молока, обычно взбитого, 100мл.</p>
+<p>Цена: 300 ₽</p>
+</div>
+<div class="item">
+<h4>Капучино</h4>
+<img src="https://yaart-web-alice-images.s3.yandex.net/editing_result_fa9e9f1a3ee311f1b87edebd91c662d7:1" alt="Капучино">
+<button class="order-btn">Заказать</button>
+<p>Идеальное сочетание эспрессо, молока и молочной пены, 300 мл.</p>
+<p>Цена: 230 ₽</p>
+</div>
+<div class="item">
+<h4>Раф</h4>
+<img src="https://yaart-web-alice-images.s3.yandex.net/editing_result_53ea66bd3ee411f1acf67e81e37f7058:1" alt="Раф">
+<button class="order-btn">Заказать</button>
+<p>Нежный кофейный напиток со сливками и ванильным сахаром, 300 мл.</p>
+<p>Цена: 280 ₽</p>
+</div>
+<div class="item">
+<h4>Флэт уайт</h4>
+<img src="https://www.koolinar.ru/all_image/recipes/176/176360/recipe_07ee1afa-5ed9-438a-a489-e5a157810a13.png" alt="Флэт уайт">
+<button class="order-btn">Заказать</button>
+<p>Двойной эспрессо с тонким слоем молочной пены, 240 мл.</p>
+<p>Цена: 260 ₽</p>
+</div>
+</div>
+</section>
+<div class="menu-category">
+<h3>Десерты</h3>
+<div class="menu-items">
+<div class="item">
+<h4>Тирамису</h4>
+<img src="https://yaart-web-alice-images.s3.yandex.net/e3c33dc93b1911f19b2a5e71b7922efa:1" height="450" width="500" alt="Тирамису">
+<button class="order-btn">Заказать</button>
+<p>Классический итальянский десерт с кофе, маскарпоне и бисквитом.</p>
+<p>Цена: 320 ₽</p>
+</div>
+<div class="item">
+<h4>Чизкейк Нью‑Йорк</h4>
+<img src="https://yaart-web-alice-images.s3.yandex.net/24a4953e3b1a11f19db92a3dc7d1aac7:1" height="450" width="500" alt="Чизкейк">
+<button class="order-btn">Заказать</button>
+<p>Нежный сырный десерт на песочной основе с карамельной глазурью.</p>
+<p>Цена: 290 ₽</p>
+</div>
+<div class="item">
+<h4>Шоколадный брауни</h4>
+<img src="https://yaart-web-alice-images.s3.yandex.net/87acb2733b1a11f19a9b325b8fe0ef20:1" height="450" width="500" alt="Брауни">
+<button class="order-btn">Заказать</button>
+<p>Плотный шоколадный десерт с тягучей серединкой.</p>
+<p>Цена: 220 ₽</p>
+</div>
+<div class="item">
+<h4>Круассан с миндалем</h4>
+<img src="https://yaart-web-alice-images.s3.yandex.net/af67c7423b1a11f1b878c26dd85608fb:1" height="450" width="500" alt="Круассан">
+<button class="order-btn">Заказать</button>
+<p>Слоёный круассан с миндальным кремом и лепестками миндаля.</p>
+<p>Цена: 190 ₽</p>
+</div>
+<div class="item">
+<h4>Морковный торт</h4>
+<img src="https://yaart-web-alice-images.s3.yandex.net/dffa35f63b1a11f19db446d2c860473b:1" height="450" width="500" alt="Морковный торт">
+<button class="order-btn">Заказать</button>
+<p>Влажный морковный бисквит с кремом из сливочного сыра.</p>
+<p>Цена: 270 ₽</p>
+</div>
+</div>
+</section>
+<section id="contacts">
+<h2>Контакты</h2>
+<address>
+<p>Адрес: г. Москва, ул. Примерная, д. 123</p>
+<p>Телефон: +7 (495) 123-45-67</p>
+<p>Email: coffee@example.com</p>
+</address>
+<iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
+</section>
+<section id="contacts" class="contact-section">
+<h2>Обратная связь</h2>
+<form id="contactForm">
+<input type="text" name="name" placeholder="Ваше имя" required>
+<input type="email" name="email" placeholder="Ваш email" required>
+<textarea name="message" placeholder="Сообщение" rows="4" required></textarea>
+<button type="submit">Отправить</button>
+</form>
+</section>
+<footer>
+<p>© 2026 Кофейня «Ароматный уголок».</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Спасибо за обращение!');
 });
-    </script>
+}
+});
+</script>
 </body>
 </html>
