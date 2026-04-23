@@ -111,6 +111,20 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
+        @media (max-width: 768px) {
+    .menu-item,
+    .menu-item.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .menu-text,
+    .menu-img {
+        max-width: 100%;
+        width: 100%;
+    }
+}
     </style>
 </head>
 <body>
