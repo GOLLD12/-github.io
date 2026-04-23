@@ -74,6 +74,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
+
         .menu-items {
             display: flex;
             flex-wrap: wrap;
@@ -82,9 +83,15 @@
 
         .item {
             border: 1px solid #ddd;
-            padding: 20px;
+            padding: 0;
             border-radius: 8px;
             text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
         }
         .item-content {
             position: relative;
@@ -94,9 +101,9 @@
         .item img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease; 
+            border-radius: 8px 8px 0 0;
+            display: block;
+            transition: transform 0.3s ease;
         }
         .item-info {
             position: absolute;
@@ -209,7 +216,6 @@
         <h2>Меню</h2>
         <div class="menu-items">
             <div class="item">
-                <div class="item-content">
                 <h3>Эспрессо</h3>
                 <img src="https://yaart-web-alice-images.s3.yandex.net/9efa82d6398c11f1afd3328e885bd055:1" alt="Эспрессо">
                 <div class="item-info">
@@ -218,7 +224,6 @@
                 <button class="order-btn">Заказать</button>
             </div>
             <div class="item">
-                <div class="item-content">
                 <h3>Латте</h3>
                 <img src="https://yaart-web-alice-images.s3.yandex.net/7421721e398d11f1b60396bdff3d57c1:1" alt="Латте">
                 <div class="item-info">
@@ -227,7 +232,6 @@
                 <button class="order-btn">Заказать</button>
             </div>
            <div class="item">
-               <div class="item-content">
                 <h4>Американо</h4>
                 <img src="https://avatars.mds.yandex.net/get-eda/15377433/3b7c5ab49cf54cae924ba92921255cef/M_height" alt="Американо">
                  <div class="item-info">
@@ -237,7 +241,6 @@
             </div>
         </div>
          <div class="item">
-             <div class="item-content">
                 <h3>Макиато</h3>
                 <img src="https://yaart-web-alice-images.s3.yandex.net/editing_result_b4df63a23ee311f184ff9eb64fb295fc:1" alt="Макиато">
                 <div class="item-info">
@@ -246,7 +249,6 @@
              <button class="order-btn">Заказать</button>
             </div>
           <div class="item">
-              <div class="item-content">
                 <h4>Капучино</h4>
                 <img src="https://yaart-web-alice-images.s3.yandex.net/editing_result_fa9e9f1a3ee311f1b87edebd91c662d7:1" alt="Капучино">
                 <div class="item-info">
@@ -263,7 +265,6 @@
                 <button class="order-btn">Заказать</button>
             </div>
             <div class="item">
-                <div class="item-content">
                 <h4>Флэт уайт</h4>
                 <img src="https://www.koolinar.ru/all_image/recipes/176/176360/recipe_07ee1afa-5ed9-438a-a489-e5a157810a13.png" alt="Флэт уайт">
                 <div class="item-info">
@@ -278,7 +279,6 @@
         </div>
         <div class="menu-items">
             <div class="item">
-                <div class="item-content">
                 <h4>Тирамису</h4>
                 <img src="https://yaart-web-alice-images.s3.yandex.net/e3c33dc93b1911f19b2a5e71b7922efa:1" height="450" width="500" alt="Тирамису">
                 <div class="item-info">
@@ -287,7 +287,6 @@
                 <button class="order-btn">Заказать</button>
             </div>
             <div class="item">
-                <div class="item-content">
                 <h4>Чизкейк Нью‑Йорк</h4>
                 <img src="https://yaart-web-alice-images.s3.yandex.net/24a4953e3b1a11f19db92a3dc7d1aac7:1" height="450" width="500" alt="Чизкейк">
                 <div class="item-info">
@@ -296,7 +295,6 @@
                 <button class="order-btn">Заказать</button>
             </div>
             <div class="item">
-                <div class="item-content">
                 <h4>Шоколадный брауни</h4>
                 <img src="https://yaart-web-alice-images.s3.yandex.net/87acb2733b1a11f19a9b325b8fe0ef20:1" height="450" width="500" alt="Брауни">
                 <div class="item-info">
@@ -305,7 +303,6 @@
                 <button class="order-btn">Заказать</button>
             </div>
             <div class="item">
-                <div class="item-content">
                 <h4>Круассан с миндалем</h4>
                 <img src="https://yaart-web-alice-images.s3.yandex.net/af67c7423b1a11f1b878c26dd85608fb:1" height="450" width="500" alt="Круассан">
                 <div class="item-info">
@@ -314,7 +311,6 @@
                 <button class="order-btn">Заказать</button>
             </div>
             <div class="item">
-                <div class="item-content">
                 <h4>Морковный торт</h4>
                 <img src="https://yaart-web-alice-images.s3.yandex.net/dffa35f63b1a11f19db446d2c860473b:1" height="450" width="500" alt="Морковный торт">
                 <div class="item-info">
