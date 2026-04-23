@@ -58,27 +58,27 @@
             cursor: pointer;
         }
 
-.order-btn {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
+        .order-btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
 
-.order-btn:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*
-}
+        .order-btn:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*
+        }
 
-.menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
         .item {
             border: 1px solid #ddd;
@@ -95,10 +95,16 @@
         }
 
         .item img:hover {
-    transform: scale(1.05); 
-    transition: transform 0.3s ease; 
-}
-
+            transform: scale(1.05); 
+            transition: transform 0.3s ease; 
+        }
+        
+        .item.category-title {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    border: none;
+        }
 
         footer {
             text-align: center;
@@ -234,8 +240,9 @@
             </div>
     </div>
     </section>
-    <div class="menu-category">
-        <h3>Десерты</h3>
+        <div class="item category-title">
+            <h3>Десерты</h3>
+        </div>
         <div class="menu-items">
             <div class="item">
                 <h4>Тирамису</h4>
