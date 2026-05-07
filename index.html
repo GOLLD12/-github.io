@@ -336,7 +336,16 @@ allowfullscreen
 </footer>
 
 <script>
-const orderButtons = document.querySelectorAll('.order-btn');
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Спасибо за обращение!');
+});
+}
+});
+  const orderButtons = document.querySelectorAll('.order-btn');
 const modal = document.getElementById('orderModal');
 const closeButton = document.getElementById('closeModal');
 
@@ -360,15 +369,6 @@ window.addEventListener('click', function(event) {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-contactForm.addEventListener('submit', function(e) {
-e.preventDefault();
-alert('Спасибо за обращение!');
-});
-}
-});
 </script>
   <div id="orderModal" class="modal">
   <div class="modal-content">
